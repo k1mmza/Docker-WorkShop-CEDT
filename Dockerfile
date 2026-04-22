@@ -11,11 +11,11 @@ FROM node:20.11-slim AS builder
 WORKDIR /app
 
 # TODO(step-4b): copy package.json and package-lock.json, then install deps.
-COPY app/package.json app/package-lock.json ./
+COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 # TODO(step-4c): copy the rest of the app source into /app.
-COPY app/ ./
+COPY . .
 
 
 # =============================================================================

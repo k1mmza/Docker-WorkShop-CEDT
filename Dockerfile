@@ -15,7 +15,7 @@ COPY app/package.json app/package-lock.json ./
 RUN npm ci --omit=dev
 
 # TODO(step-4c): copy the rest of the app source into /app.
-COPY . .
+COPY app/ ./
 
 
 # =============================================================================
